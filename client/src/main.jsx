@@ -8,6 +8,7 @@ import NotFound from './notfound/NotFound';
 import LandingPage from './pages/LandingPage';
 import ContactsManagement from './layouts/ContactManagement';
 import { AuthProvider } from './context/AuthContext';
+import AboutMe from './pages/AboutMe';
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: '*',
     element: <NotFound />,
+  },
+  {
+    path: '/aboutme',
+    element: <AboutMe />,
   },
 ]);
 

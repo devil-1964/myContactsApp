@@ -36,9 +36,10 @@ const LandingPage = () => {
           <Button onClick={()=>navigate('/login')}  variant="default" className="transition-all duration-300">
             Get Started
           </Button>
+          
           <Button
             variant="ghost"
-            className="text-white hover:bg-white hover:text-gray-800 transition-all duration-300"
+            className="text-white hover:bg-white hover:text-gray-800 transition-all duration-300"  onClick={()=>navigate('/aboutme')}
           >
             Learn More <ArrowRight className="ml-1 w-5" />
           </Button>

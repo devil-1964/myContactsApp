@@ -90,3 +90,12 @@
   background-color: white; /* Background color for selected text */
   color: black; /* Text color for selected text */
 }
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
