@@ -6,17 +6,17 @@ import axios from 'axios';
 const AboutMe = () => {
     const [userData, setUserData] = useState(null);
     const [repos, setRepos] = useState([]);
-    const githubUsername = import.meta.env.VITE_GITHUB_USERNAME; 
+    const githubUsername = "devil-1964"; 
 
     useEffect(() => {
         const fetchGithubData = async () => {
             try {
                 const userResponse = await axios.get(`https://api.github.com/users/${githubUsername}`);
-                console.log(userResponse.data)
+                // console.log(userResponse.data)
                 setUserData(userResponse.data);
 
                 const reposResponse = await axios.get(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`);
-                console.log(reposResponse.data)
+                // console.log(reposResponse.data)
                 setRepos(reposResponse.data);
             } catch (error) {
                 console.error('Error fetching GitHub data:', error);
