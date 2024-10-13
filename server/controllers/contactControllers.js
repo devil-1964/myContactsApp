@@ -42,12 +42,13 @@ const createContact = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("All fields are mandatory");
   }
-  const det=await Contact.findOne(
+  const existingContact=await Contact.findOne(
     {
+      user_id: req.user.id,
       $or: [{ email }, { phone }]
     }
   )
-  if(det)
+  if(existingContact)
   {
     res.status(400)
     throw new Error("Contact already exist")
