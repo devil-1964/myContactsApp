@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
+
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative flex flex-col-reverse md:flex-row items-center justify-between h-screen text-white px-4 md:px-16 lg:px-24 overflow-hidden bg-gradient-to-b from-[#0A0A0A] to-zinc-900">
       {/* Background Image */}
@@ -29,7 +33,7 @@ const LandingPage = () => {
           Organize, manage, and connect with your contacts effortlessly.
         </p>
         <div className="flex space-x-4">
-          <Button variant="default" className="transition-all duration-300">
+          <Button onClick={()=>navigate('/login')}  variant="default" className="transition-all duration-300">
             Get Started
           </Button>
           <Button
