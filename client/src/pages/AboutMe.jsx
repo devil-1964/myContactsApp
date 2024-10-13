@@ -27,7 +27,17 @@ const AboutMe = () => {
     }, []);
 
     if (!userData) {
-        return <div>Loading...</div>;
+        return  <div className="min-h-screen bg-gradient-to-b from-[#0A0A0A] to-zinc-900 flex items-center justify-center">
+        <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: 'url("/bg.png")' }}></div>
+        <div className="relative z-10 flex items-center text-3xl font-bold font-mono text-white">
+            Loading
+            <img 
+                src="https://img.icons8.com/stamp/64/synchronize.png" 
+                className='animate-spin w-10 h-10 ml-2' 
+                alt="spin"
+            />
+        </div>
+    </div>;
     }
 
     return (
