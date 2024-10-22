@@ -39,7 +39,7 @@ const NotFound = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundImage: 'url("https://img.icons8.com/color-pixels/64/mushroom.png")',
+          backgroundImage: 'url("https://img.icons8.com/external-bearicons-flat-bearicons/64/external-Crash-file-and-document-bearicons-flat-bearicons.png")',
           opacity: 0.7,
           zIndex: 0,
         }}
