@@ -80,6 +80,9 @@ export default function SignUpPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete="off"
+                minLength="8" 
+                pattern=".*[A-Z].*"
+                title="Password must be at least 8 characters long and include at least one uppercase letter."
                 required
               />
             </div>

@@ -350,7 +350,7 @@ const ContactForm = ({ onSubmit, initialData }) => {
           Phone
         </label>
         <Input
-          type="tel"
+          type="number"
           id="phone"
           name="phone"
           value={formData.phone}
