@@ -350,7 +350,10 @@ const ContactForm = ({ onSubmit, initialData }) => {
           Phone
         </label>
         <Input
-          type="number"
+          input type="text" 
+          inputmode="numeric" 
+          pattern="[0-9]*"
+          title="Please enter only numbers."
           id="phone"
           name="phone"
           value={formData.phone}
