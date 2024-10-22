@@ -6,7 +6,7 @@ import axios from 'axios';
 const AboutMe = () => {
     const [userData, setUserData] = useState(null);
     const [repos, setRepos] = useState([]);
-    const githubUsername = "devil-1964"; 
+    const githubUsername = import.meta.env.VITE_GITHUB_USERNAME; 
 
     useEffect(() => {
         const fetchGithubData = async () => {
